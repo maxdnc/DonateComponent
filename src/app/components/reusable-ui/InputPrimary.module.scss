@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 52px;
+  border: 1px solid $darker-border-color;
+  span {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input {
+    width: 100%;
+    color: #000;
+    outline: none;
+    border: none;
+    margin-right: 1rem;
+    font-weight: bold;
+    &::placeholder {
+      color: #000;
+      font-weight: 600;
+      padding-left: none;
+    }
+  }
+  .error {
+    position: absolute;
+    bottom: -20px;
+    font-size: 12px;
+    color: red;
+  }
+
+  @include respond-to('large') {
+    max-width: 235px;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    min-width: 235px;
+    margin-left: -0.5rem;
+  }
+}

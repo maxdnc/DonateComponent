@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 54px;
+  background-color: $tertiary-color;
+  border: 1px solid $darker-border-color;
+  font-weight: bold;
+  font-size: 1.25rem;
+  width: 100%;
+  cursor: pointer;
+  line-height: 1.2;
+  &.active {
+    background-color: $quinary-color;
+    border: 1px solid $quinary-color;
+    color: $white-color;
+  }
+  @include respond-to('large') {
+    min-width: 154px;
+  }
+}

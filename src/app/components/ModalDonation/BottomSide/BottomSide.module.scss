@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: $tertiary-color;
+  width: 100%;
+  padding-block: 2rem;
+  p {
+    font-size: 0.8rem;
+    color: #616268;
+    text-align: center;
+    max-width: 250px;
+    line-height: 1.5;
+    margin: 0;
+    @include respond-to('large') {
+      max-width: 100%;
+      order: 2;
+    }
+  }
+  @include respond-to('large') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.button {
+  margin-top: 1rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+  @include respond-to('large') {
+    margin-top: 0;
+    order: 1;
+    padding-left: 1.5rem;
+  }
+}

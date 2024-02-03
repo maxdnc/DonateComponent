@@ -1,0 +1,25 @@
+.button {
+  display: block;
+  background-color: $primary-color;
+  color: $white-color;
+  font-weight: bold;
+  height: 54px;
+  width: 100%;
+  margin: -1px -1px 1px -1px;
+  border: none;
+  cursor: pointer;
+
+  &.active {
+    height: 60px;
+    background-color: $white-color;
+    color: $primary-color;
+    border: 1px solid $border-color;
+    border-bottom: none;
+    box-shadow: 0px -10px 10px 0 rgba(0, 0, 0, 0.05);
+    margin: -1px -1px 0px -1px;
+    padding-bottom: 1px;
+  }
+  @include respond-to('large') {
+    max-width: 248px;
+  }
+}

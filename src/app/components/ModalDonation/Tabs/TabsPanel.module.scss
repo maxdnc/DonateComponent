@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%);
+  z-index: 5;
+  width: 100%;
+  @include respond-to('large') {
+    justify-content: start;
+  }
+}

@@ -1,0 +1,7 @@
+@mixin respond-to($media) {
+  @if $media == 'large' {
+    @media (min-width: 1295px) {
+      @content;
+    }
+  }
+}
